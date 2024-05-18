@@ -39,3 +39,13 @@ greatest_decreaseDate = max_decrease['Date']
 greatest_decreaseValue = max_decrease['Change']
 print(f"Greatest Decrease in Profits: {greatest_decreaseDate} (${greatest_decreaseValue})")
 
+#exporting text file
+output_file_path = 'Analysis/output.txt'
+with open(output_file_path,'w') as file:
+    file.write("Financial Analysis\n")
+    file.write("-------------------\n")
+    file.write(f"Total Months: {totalMonths}\n")
+    file.write(f"Total: {netTotal}\n")
+    file.write(f"Average Change: {average_change}\n")
+    file.write(f"Greatest increase in Profits: {greatest_increaseDate} (${greatest_increaseValue})\n")
+    file.write(f"Greatest Decrease in Profits: {greatest_decreaseDate} (${greatest_decreaseValue})\n")
